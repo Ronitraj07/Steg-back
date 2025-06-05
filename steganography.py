@@ -9,6 +9,7 @@ from cryptography.fernet import Fernet
 
 app = Flask(__name__)
 CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 UPLOAD_DIR = "uploads"
 OUTPUT_DIR = "output"
