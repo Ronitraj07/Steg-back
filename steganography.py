@@ -8,7 +8,10 @@ from PIL import Image
 from cryptography.fernet import Fernet
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://ronitraj07.github.io"}}, supports_credentials=True)
+CORS(app, origins=[
+    "https://ronitraj07.github.io",             # your frontend on GitHub Pages
+    "https://steg-back.onrender.com"            # your backend on Render
+])
 
 UPLOAD_DIR = "uploads"
 OUTPUT_DIR = "output"
