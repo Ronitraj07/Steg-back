@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 # Allow requests from your specific GitHub Pages URL
 # The '*' is a fallback, but it's better to be specific.
-CORS(app, origins=["https://ronitraj07.github.io", "http://localhost:3000"])
+CORS(app, origins=["https://ronitraj07.github.io", "http://localhost:3000", "https://stegano-one.vercel.app" ])
 
 # Set a file size limit (e.g., 50MB)
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
